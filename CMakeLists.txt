@@ -38,16 +38,6 @@ endif()
 # endif()
 
 if(BUILD_SERVER)
-	# ExternalProject_Add(
-	# 	yapb
-	# 	SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/yapb
-	# 	CONFIGURE_COMMAND meson setup --buildtype ${MESON_BUILD_TYPE} build
-	# 	BUILD_COMMAND meson compile -C build
-	# 	BUILD_ALWAYS 1
-	# 	BUILD_IN_SOURCE 1
-	# 	INSTALL_COMMAND meson install -C build --destdir ${CMAKE_INSTALL_PREFIX}
-	# )
-	add_subdirectory(3rdparty/yapb)
 	add_subdirectory(3rdparty/ReGameDLL_CS)
 endif()
 
