@@ -6,8 +6,6 @@ if(NOT ANDROID)
 	add_custom_target(pack_extras ALL
 		COMMAND ${CMAKE_COMMAND} -E copy_directory
 		"${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/cs16client-extras" "${EXTRAS_DIR}"
-		COMMAND ${CMAKE_COMMAND} -E copy_directory
-		"${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/yapb/cfg/addons" "${EXTRAS_DIR}"
 		COMMAND ${CMAKE_COMMAND} -E tar cf "${EXTRAS_DIR}.pk3" --format=zip .
 		WORKING_DIRECTORY "${EXTRAS_DIR}"
 		DEPENDS "${EXTRAS_DIR}")
